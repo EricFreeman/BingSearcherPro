@@ -8,12 +8,16 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
         <StackPanel Grid.ColumnSpan="2">
             <TextBox Text="http://www.bing.com" />
             <WebBrowser Name="Browser" />
         </StackPanel>
         <StackPanel Grid.Column="2">
+            <ListBox ItemsSource="{Binding AccountList}" Name="Accounts" />
             <TextBlock Text="TODO: Put fields to add new accounts here" />
         </StackPanel>
     </Grid>
